@@ -36,3 +36,31 @@ iOSKitManager.ShowPopup("Test Title", "Test Message", new string[]{"Button One",
 		});
 ```
 
+###Register For Remote Notifications
+Register the user for Notifications
+
+```csharp
+public static void RegisterUserForNotifications(System.Action<string, string> callback)
+```
+
+**Example**
+
+```csharp
+iOSKitManager.RegisterUserForNotifications( (deviceToken, error) => {
+			Debug.Log("DeviceToken: " + deviceToken + " Error: " + error);
+		});
+```
+
+###Set Icon Badge Number
+Set the badge number for the app icon.
+
+```csharp
+public static void SetBadgeNumber(int number)
+```
+
+**Example**
+
+```csharp
+iOSKitManager.SetBadgeNumber(5);
+```
+
